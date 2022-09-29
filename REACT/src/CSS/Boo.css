@@ -1,0 +1,51 @@
+.cursor {
+    z-index: 9999;
+    border-radius: 100%;
+    width: 130px;
+    height: 130px;
+    background: url("../media/BooChaseClear.png");
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    pointer-events: none;
+    overflow: hidden;
+    transform: translate3d(0, 0, 0);
+    transition: 800ms ease-out;
+    /* position: fixed; */
+  }
+  
+  .boo-parent {
+    display: flex;
+    /* padding-top: 200px; */
+    animation: ghostFloat 2s ease-in-out infinite;
+  }
+  
+  .cursorStop {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    z-index: 9999;
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    background: url("../media/BooDormant.webp");
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    pointer-events: none;
+    overflow: hidden;
+    transform: translate3d(0, 0, 0);
+    /* position: fixed; */
+  
+  }
+  
+  @keyframes ghostFloat {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-1rem);
+    }
+  }
