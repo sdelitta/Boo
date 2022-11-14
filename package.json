@@ -1,0 +1,37 @@
+{
+  "name": "boo",
+  "version": "1.0.0",
+  "description": "The adorable spectre from the Super Mario franchise, Boo, is known for giving chase when our heroes back is turned, but then cowardly freezes in its tracks when Mario confronts it. This \"mousemove\" animation is meant to mimic those behaviors as well as change expressions depending on when the user moves their cursor.",
+  "main": "index.js",
+  "scripts": {
+    "build": "react-scripts build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sdelitta/Boo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sdelitta/Boo/issues"
+  },
+  "homepage": "https://github.com/sdelitta/Boo#readme",
+  "dependencies": {
+    "react-router-dom": "^6.4.3",
+    "react-scripts": "^5.0.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
