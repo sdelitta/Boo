@@ -1,0 +1,57 @@
+body {
+  background: url("../media/SMWhauntedBCKGRND.jpeg");
+}
+
+blank {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.cursor {
+    z-index: 9999;
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    background: url("../media/ActiveBoo.png");
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    pointer-events: none;
+    overflow: hidden;
+    transform: translate3d(0, 0, 0);
+    transition: 600ms ease-out;
+  }
+  
+  .boo-parent {
+    display: flex;
+    animation: ghostFloat 2s ease-in-out infinite;
+  }
+  
+  .cursorStop {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    z-index: 9999;
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    background: url("../media/ShyBoo.png");
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    pointer-events: none;
+    overflow: hidden;
+    transform: translate3d(0, 0, 0);
+    transition: 300ms ease-out;
+  }
+  
+  @keyframes ghostFloat {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-1rem);
+    }
+  }
