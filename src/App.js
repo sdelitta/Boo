@@ -21,7 +21,7 @@ useEffect(() => {
 // check if previous mouse position is equal to current mouse position
 useEffect(() => {
   console.log(timerVal)
-  if (timerVal > 300) {
+  if (timerVal > 100) {
     setIsMouseMoving(false);
   }
 }, [timerVal])

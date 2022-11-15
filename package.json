@@ -17,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/sdelitta/Boo/issues"
   },
-  "homepage": "https://github.com/sdelitta/Boo#readme",
+  "homepage": "./",
   "dependencies": {
     "react-router-dom": "^6.4.3",
     "react-scripts": "^5.0.1"
