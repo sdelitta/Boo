@@ -37,14 +37,24 @@ useEffect(() => {
   
   
   return (
-    <div className="boo-parent">
-      <div className="blank">
-        <p></p>
+  <div className="App">
+    <body>
+      <div className="boo-parent">
+        <div className="blank">
+          <p></p>
+        </div>
+        <div className="boo">
+          <div className={isMouseMoving ? "cursor" : "cursorStop"} ref={cursorRef} />
+        </div>
       </div>
-      <div className="boo">
-        <div className={isMouseMoving ? "cursor" : "cursorStop"} ref={cursorRef} />
+    </body>  
+    <div className="footer-parent">
+      <div className="footer">.</div>
+      <div className="copyright">
+        <p>Steven DeLitta 2022</p>
       </div>
-    </div>
+    </div> 
+  </div>
   )
 } 
 
