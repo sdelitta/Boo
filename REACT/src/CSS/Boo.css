@@ -1,9 +1,24 @@
+body {
+  background: url("../media/SMWhauntedBCKGRND.jpeg");
+}
+
+blank {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.boo-parent {
+  display: flex;
+  flex-direction: column;
+  animation: ghostFloat 2s ease-in-out infinite;
+}
+
 .cursor {
     z-index: 9999;
     border-radius: 100%;
-    width: 130px;
-    height: 130px;
-    background: url("../media/BooChaseClear.png");
+    width: 100px;
+    height: 100px;
+    background: url("../media/ActiveBoo.png");
     background-color: transparent;
     background-position: center;
     background-repeat: no-repeat;
@@ -11,14 +26,23 @@
     pointer-events: none;
     overflow: hidden;
     transform: translate3d(0, 0, 0);
-    transition: 800ms ease-out;
-    /* position: fixed; */
+    transition: 300ms ease-out;
   }
-  
-  .boo-parent {
-    display: flex;
-    /* padding-top: 200px; */
-    animation: ghostFloat 2s ease-in-out infinite;
+
+  .cursor-right {
+    z-index: 9999;
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    background: url("../media/ActiveBooreverse.png");
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    pointer-events: none;
+    overflow: hidden;
+    transform: translate3d(0, 0, 0);
+    transition: 300ms ease-out;
   }
   
   .cursorStop {
@@ -29,7 +53,7 @@
     border-radius: 100%;
     width: 100px;
     height: 100px;
-    background: url("../media/BooDormant.webp");
+    background: url("../media/ShyBoo.png");
     background-color: transparent;
     background-position: center;
     background-repeat: no-repeat;
@@ -37,8 +61,26 @@
     pointer-events: none;
     overflow: hidden;
     transform: translate3d(0, 0, 0);
-    /* position: fixed; */
-  
+    transition: 300ms ease-out;
+  }
+
+  .cursorStop-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    z-index: 9999;
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    background: url("../media/ShyBooreverse.png");
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    pointer-events: none;
+    overflow: hidden;
+    transform: translate3d(0, 0, 0);
+    transition: 300ms ease-out;
   }
   
   @keyframes ghostFloat {
