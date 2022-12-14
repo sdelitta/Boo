@@ -4,13 +4,19 @@ App {
 }
 
 body {
-  height: 87vh;
+  height: 91vh;
   background: url("../media/SMWhauntedBCKGRND.jpeg");
 }
 
 blank {
   display: flex;
   justify-content: flex-end;
+}
+
+.boo-parent {
+  display: flex;
+  flex-direction: column;
+  animation: ghostFloat 2s ease-in-out infinite;
 }
 
 .cursor {
@@ -26,41 +32,71 @@ blank {
     pointer-events: none;
     overflow: hidden;
     transform: translate3d(0, 0, 0);
-    transition: 600ms ease-out;
+    transition: 300ms ease-out;
+  }
+
+  .cursor-right {
+    z-index: 9999;
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    background: url("../media/ActiveBooreverse.png");
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    pointer-events: none;
+    overflow: hidden;
+    transform: translate3d(0, 0, 0);
+    transition: 300ms ease-out;
   }
   
-.boo-parent {
-  display: flex;
-  animation: ghostFloat 2s ease-in-out infinite;
-}
-
-.cursorStop {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  z-index: 9999;
-  border-radius: 100%;
-  width: 100px;
-  height: 100px;
-  background: url("../media/ShyBoo.png");
-  background-color: transparent;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-  pointer-events: none;
-  overflow: hidden;
-  transform: translate3d(0, 0, 0);
-  transition: 300ms ease-out;
-}
-
-@keyframes ghostFloat {
-  0%, 100% {
-    transform: translateY(0);
+  .cursorStop {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    z-index: 9999;
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    background: url("../media/ShyBoo.png");
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    pointer-events: none;
+    overflow: hidden;
+    transform: translate3d(0, 0, 0);
+    transition: 300ms ease-out;
   }
-  50% {
-    transform: translateY(-1rem);
+
+  .cursorStop-right {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    z-index: 9999;
+    border-radius: 100%;
+    width: 100px;
+    height: 100px;
+    background: url("../media/ShyBooreverse.png");
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    pointer-events: none;
+    overflow: hidden;
+    transform: translate3d(0, 0, 0);
+    transition: 300ms ease-out;
   }
-}
+  
+  @keyframes ghostFloat {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-1rem);
+    }
+  }
 
 .footer-parent {
   position: relative;
@@ -68,7 +104,7 @@ blank {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height:13vh;
+  height:10vh;
   background-image: url("https://c.tenor.com/DiZ6wOY9jJwAAAAC/super-mario-world-boo.gif");
   background-repeat: repeat;
 }
@@ -85,7 +121,7 @@ blank {
   font-family: 'Francois One', sans-serif;
   font-size: 1.5rem;
   text-shadow: 1px 2px rgba(0, 0, 0, 0.227);
-  background-image: radial-gradient(rgba(187, 188, 190, 0.982), rgba(0, 0, 0, 0));
+  background-image: radial-gradient( rgba(187, 188, 190, 0.982), rgba(0, 0, 0, 0));
   display: inline-block;
   line-height: normal;
   vertical-align: middle;
