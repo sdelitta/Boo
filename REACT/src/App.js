@@ -39,19 +39,27 @@ export const App = () => {
   }, []);
 
   return (
-    <div className="boo-parent">
-      <div className="blank">
-        <p></p>
+    <div>
+      <div className="boo-parent">
+        <div className="blank">
+          <p></p>
+        </div>
+        <div className="boo">
+          <div className={
+            isMouseMoving && booRight ? "cursor" : 
+            !isMouseMoving && booRight ? "cursorStop" : 
+            isMouseMoving && !booRight ? "cursor-right" : 
+            "cursorStop-right"} 
+            ref={cursorRef} 
+          />
+        </div>
       </div>
-      <div className="boo">
-        <div className={
-          isMouseMoving && booRight ? "cursor" : 
-          !isMouseMoving && booRight ? "cursorStop" : 
-          isMouseMoving && !booRight ? "cursor-right" : 
-          "cursorStop-right"} 
-          ref={cursorRef} 
-        />
-      </div>
+      <div className="footer-parent">
+          <div className="footer">.</div>
+          <div className="copyright">
+            <p>Steven DeLitta 2023</p>
+          </div>
+        </div>
     </div>
   );
 } 

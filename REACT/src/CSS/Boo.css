@@ -1,8 +1,9 @@
 body {
   background: url("../media/SMWhauntedBCKGRND.jpeg");
+  height: 90%;
 }
 
-blank {
+.blank {
   display: flex;
   justify-content: flex-end;
 }
@@ -11,6 +12,7 @@ blank {
   display: flex;
   flex-direction: column;
   animation: ghostFloat 2s ease-in-out infinite;
+  height: 90%;
 }
 
 .cursor {
@@ -93,3 +95,35 @@ blank {
       transform: translateY(-1rem);
     }
   }
+
+.footer-parent {
+  align-items: center;
+  background-image: url(https://c.tenor.com/DiZ6wOY9jJwAAAAC/super-mario-world-boo.gif);
+  background-repeat: repeat;
+  display: flex;
+  flex-direction: column;
+  margin-top: 80%;
+  justify-content: center;
+  position: relative;
+}
+
+.footer {
+    background-image: linear-gradient(180deg,#000,rgba(0,0,0,.806),rgba(255,0,0,0));
+    color: #cccccc00;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.copyright {
+    background-image: radial-gradient(hsla(0,4%,82%,.568) 35%,transparent 92%,hsla(6,93%,71%,0) 0);
+    display: inline-block;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    line-height: normal;
+    text-align: center;
+    text-shadow: 1px 2px rgba(0,0,0,.227);
+    vertical-align: middle;
+    width: 25vw;
+}
