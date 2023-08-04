@@ -18,7 +18,7 @@ blank {
     border-radius: 100%;
     width: 100px;
     height: 100px;
-    background: url("../media/ActiveBoo.png");
+    background: url("../media/ActiveBooreverse.png");
     background-color: transparent;
     background-position: center;
     background-repeat: no-repeat;
@@ -34,7 +34,7 @@ blank {
     border-radius: 100%;
     width: 100px;
     height: 100px;
-    background: url("../media/ActiveBooreverse.png");
+    background: url("../media/ActiveBoo.png");
     background-color: transparent;
     background-position: center;
     background-repeat: no-repeat;
@@ -44,6 +44,8 @@ blank {
     transform: translate3d(0, 0, 0);
     transition: 300ms ease-out;
   }
+
+  
   
   .cursorStop {
     display: flex;
@@ -53,7 +55,7 @@ blank {
     border-radius: 100%;
     width: 100px;
     height: 100px;
-    background: url("../media/ShyBoo.png");
+    background: url("../media/ShyBooreverse.png");
     background-color: transparent;
     background-position: center;
     background-repeat: no-repeat;
@@ -72,7 +74,7 @@ blank {
     border-radius: 100%;
     width: 100px;
     height: 100px;
-    background: url("../media/ShyBooreverse.png");
+    background: url("../media/ShyBoo.png");
     background-color: transparent;
     background-position: center;
     background-repeat: no-repeat;
