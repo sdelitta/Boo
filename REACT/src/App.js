@@ -1,10 +1,27 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import "./CSS/Boo.css"
 
 export const App = () => {
   const cursorRef = React.useRef(null);
   const [isMouseMoving, setIsMouseMoving] = useState(true);
   const [booRight, setBooRight] = useState(true);
+  const audioRef = useRef(null);  // Create a ref to the audio element
+
+  // Function to play or pause the music
+  const togglePlay = () => {
+    const audio = audioRef.current;
+    if (audio.paused) {
+      audio.play();
+    } else {
+      audio.pause();
+    }
+  };
+
+  // Function to change the volume
+  const changeVolume = (event) => {
+    const audio = audioRef.current;
+    audio.volume = event.target.value;
+  };
   
   useEffect(() => {
     const mouseMoveHandler = (event) => {
@@ -54,12 +71,19 @@ export const App = () => {
           />
         </div>
       </div>
+      <div className="music">
+        <audio id="background-music" ref={audioRef} autoPlay loop>
+          <source src="https://vgmsite.com/soundtracks/super-mario-world-snes-gamerip/kkkqxvrgcj/28%20Haunted%20House.mp3" type="audio/mpeg" />
+        </audio>
+        <button onClick={togglePlay}>Play/Pause</button>
+        <input type="range" min="0" max="1" step="0.01" onChange={changeVolume} />
+      </div>
       <div className="footer-parent">
-          <div className="footer">.</div>
-          <div className="copyright">
-            <p>Steven DeLitta 2023</p>
-          </div>
+        <div className="footer">.</div>
+        <div className="copyright">
+          <p>Steven DeLitta 2023</p>
         </div>
+      </div>
     </div>
   );
 } 

@@ -35,6 +35,12 @@ export const Boo = () => {
       <div className="boo">
         <div key={isMovingRight.toString()} className={getCursorClass()} ref={cursorRef} />
       </div>
+      <div className="footer-parent">
+        <div className="footer">.</div>
+        <div className="copyright">
+          <p>Steven DeLitta 2023</p>
+        </div>
+      </div>
     </div>
   )  
 }
